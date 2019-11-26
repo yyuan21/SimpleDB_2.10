@@ -1,5 +1,5 @@
 CC=javac
-SRCS := $(shell find -name "*.java")
+SRCS := $(shell find . -name "*.java")
 
 .PHONY: compile-all
 
