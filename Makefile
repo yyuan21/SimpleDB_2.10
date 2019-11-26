@@ -9,13 +9,13 @@ FILES = simpledb/server/Startup.java studentClient/simpledb/CreateStudentDB.java
 
 .PHONY: run-server sqlInterpreter run-interpreter wait-die-test nq-checkpoint-test
 
-compile:
+precompile:
 	$(CC) $(FILES)
 
-recompile:
+compile: precompile
 	$(MAKE) -C $(COMP_DIR) compile-all
 
-run-server: compile
+run-server: precompile
 	$(JAVA) simpledb.server.Startup student
 
 sqlInterpreter:
