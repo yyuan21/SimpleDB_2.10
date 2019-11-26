@@ -1,0 +1,30 @@
+# Project 5 Concurrency and Recovery
+
+## Before you do anything, make sure you have the following:
+
+1. Using Bash
+2. Cloned this repo to your $HOME directory
+
+## How to build
+
+1. run the setup script
+
+./setup.sh
+
+This will simply append a line to your Bash's init file so Java knows where to find SimpleDB modules.
+
+2. run "make compile" to compile your code. remember to recompile whenever you make changes/add files.
+
+## The makefile
+
+The Makefile have the following commands:
+
+ - make compile: recompile all source code under tx/
+ - make run-server: run the db server
+ - make sqlInterpreter: compile the SQLInterpreter
+ - make run-interpreter: run the SQLInterpreter
+ - make wait-die-test: run the test for wait-die section
+ - make nq-checkpoint-test: run NQCheckpointing tests.
+
+Basically, you will use "make compile" to compile your changes, and "make wait-die-test" & "make nq-checkpoint-test"
+to test your code for the Part I & II of the project. Check the project handout for the correct outputs of these tests.
